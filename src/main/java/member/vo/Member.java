@@ -7,6 +7,7 @@ import member.exception.IdPasswordNotMatchingException;
 public class Member {
 	
 	private Long id;
+	// 수정해볼까?
 	private String email;
 	private String password;
 	private String name;
