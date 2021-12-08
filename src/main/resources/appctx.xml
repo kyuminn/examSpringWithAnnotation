@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- 아래 선언을 하면 객체 생성 시 @Autowired(의존자동주입) 어노테이션을 사용할 수 있다 -->
+	<context:annotation-config/>
+
+	<bean id="memberDao" class="member.dao.MemberDao"/>
+	
+	<bean id="memberRegSvc" class="member.service.MemberRegisterService"/>
+	
+	<bean id="changePwdSvc" class="member.service.ChangePasswordService"/>
+	
+	<!--  <bean id="memberPrinter" class="member.printer.MemberPrinter"/>-->
+	<bean id="printer1" class="member.printer.MemberPrinter">
+		<qualifier value="sysout"></qualifier>	
+	</bean>
+		
+	<bean id="printer2" class="member.printer.MemberPrinter"/>
+	
+	
+	<bean id="memberListPrinter" class="member.printer.MemberListPrinter"/>
+
+	<bean id="memberInfoPrinter" class="member.printer.MemberInfoPrinter"/>
+	
+	<bean id="versionPrinter" class="member.printer.VersionPrinter">
+		<property name="majorVersion" value="4"/>
+		<property name="minorVersion" value="1"/>
+	</bean>
+</beans>
