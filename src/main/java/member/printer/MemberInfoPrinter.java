@@ -26,6 +26,7 @@ public class MemberInfoPrinter {
 	@Resource(name="printer1")
 	public void setMemberPrinter(MemberPrinter memberPrinter) {
 		this.memberPrinter = memberPrinter;
+		System.out.println("printer1");
 	}
 	
 	public void printMemberInfo(String email) {
