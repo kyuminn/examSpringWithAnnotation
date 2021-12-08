@@ -8,6 +8,7 @@ public class Member {
 	
 	private Long id;
 	// 수정해볼까?
+	// 아니 수정은 나중에 ㅎㅎ
 	private String email;
 	private String password;
 	private String name;
