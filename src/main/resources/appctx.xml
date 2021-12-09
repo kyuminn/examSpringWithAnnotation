@@ -8,7 +8,8 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
 	
-	<!-- 아래 선언을 하면 객체 생성 시 @Autowired(의존자동주입) 어노테이션을 사용할 수 있다 -->
+	<!-- 아래 선언을 하면 객체 생성 시 @Autowired(의존자동주입), @Resource 어노테이션을 사용할 수 있다 -->
+	<!-- Autowired는 타입을 기준으로  Resource는 bean 이름(id)를 기준으로! -->
 	<context:annotation-config/>
 
 	<bean id="memberDao" class="member.dao.MemberDao"/>
